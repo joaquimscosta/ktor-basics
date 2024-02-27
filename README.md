@@ -90,6 +90,7 @@ routing{
 }
 ```
 Specify the verb as part of the DSL: `post`, `get`, `put`, `delete`, `head`,...
+
 ### Pattern
 - `/users/{id}`
 - `/users/{id}/friends`
@@ -98,10 +99,12 @@ Specify the verb as part of the DSL: `post`, `get`, `put`, `delete`, `head`,...
   - matches: `/books/1`, `/books/code_complete`, but not `/books`
 - You can use tailcards: `/books/{...}` if you need more flexibility
   - matches: `/books`, `/books/1`, `/books/code_complete`
+
 ### Handler
  - The code that will be executed when the route is matched
  - Has access to the `call` object
  - Read the request, write the response
+  
 ###`call` Object
  - Represents the request and response
  - Has properties and methods to read the request and write the response
