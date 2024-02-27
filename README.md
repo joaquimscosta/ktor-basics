@@ -35,12 +35,12 @@ https://start.ktor.io/
 Application.kt
 ```kotlin
 fun main(args: Array<String>) {
-    embeddedServer(
-        Netty,
-        port = 8080,
-        host = "0.0.0.0",
-        module = Application::module
-    ).start(wait = true)
+  embeddedServer(
+      Netty,
+      port = 8080,
+      host = "0.0.0.0",
+      module = Application::module
+  ).start(wait = true)
 }
 
 fun Application.module() {...}
@@ -63,7 +63,7 @@ ktor {
 Application.kt
 ```kotlin
 fun main(args: Array<String>) {
-    EngineMain.main(args)
+  EngineMain.main(args)
 }
 
 fun Application.module() {...}
@@ -74,19 +74,19 @@ To configure the routing plugin you normally add an extension function to the Ap
 
 ```kotlin
 fun Application.module(){
-	routing{
-		// routes defined here
-	}
+  routing{
+      // routes defined here
+  }
 }
 ```
 ### Define a handler (verb, path pattern and handler)
 ```kotlin
 routing{
-	get("/users"){
-		handle{
-			call.respondText("Get all users!!")
-		}
-	}
+  get("/users"){
+    handle{
+      call.respondText("Get all users!!")
+    }
+  }
 }
 ```
 Specify the verb as part of the DSL: `post`, `get`, `put`, `delete`, `head`,...
